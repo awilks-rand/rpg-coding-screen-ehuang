@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>model.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <table class="simpletable caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Logit Regression Results</caption>
 <tbody>
@@ -344,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Time:</td>
-<td>02:28:42</td>
+<td>15:01:44</td>
 <td data-quarto-table-cell-role="th">Log-Likelihood:</td>
 <td>-4849.3</td>
 </tr>
@@ -857,7 +857,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
@@ -966,7 +966,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="task-4" class="level2">
 <h2 class="anchored" data-anchor-id="task-4">TASK 4</h2>
 <section id="model-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="model-comparison">Model Comparison</h3>
+<h3 class="anchored" data-anchor-id="model-comparison">Model comparison</h3>
 <p>Based on my analysis, I conclude that a LightGBM model would be preferable over a logistic regression model in a production setting.</p>
 <p>It is important to note that I assume a credit card company’s primary goal is to minimize false negatives and prioritize recall over precision. Missing actual fraudulent cases would be much more costly than falsely flagging legitimate transactions. While false alarms can inconvenience customers, this is of lower priority than overlooking fraud, which would result in financial losses and reputational damage.</p>
 <p>My conclusion is supported by the metrics table and plots above:</p>
@@ -982,7 +982,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To limit the false positive rate and improve customer satisfaction, I would recommend adjusting the decision threshold for classifying fraud cases, implementing additional verification steps for flagged transactions, and developing user-friendly methods for customers to verify whether flagged transactions are actually fraudulent.</p>
 </section>
 <section id="experiment-recommendation" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-recommendation">Experiment Recommendation</h3>
+<h3 class="anchored" data-anchor-id="experiment-recommendation">Experiment recommendation</h3>
 <p>The program described could be implemented as a randomized controlled trial. To determine whether the anti-fraud program is effective, I suggest the following strategy:</p>
 <ol type="1">
 <li>Collect data over a minimum of 12-18 months to allow for enough time to detect fraudulent patterns and account for seasonal/holiday variations.</li>
@@ -992,7 +992,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Implement a series of regression models to analyze the differences in outcomes between treatment and control groups. The outcome variables would include financial losses, number of fraudulent cases, and customer satisfaction. The independent variable with the coefficient of interest is whether the transaction was treated with the anti-fraud program, and the remainder of the variables will serve as control variables.</li>
 <li>Use the findings from the control variables to continually improve on the anti-fraud program. For example, the model may indicate that more fraudulent transactions occur during the holiday season, in particular zip codes, or higher age ranges.</li>
 </ol>
-<p>In order for the program to be deemed as effective, there would need to be a statistically significant treatment effect indicating that cases in the anti-fraud program were associated with less financial losses, less fraudulent cases, and better customer satisfaction. Because this is a randomized controlled trial, the treatment effect could be interpreted be a direct causal effect of the program. Importantly, these results should be substantial enough to outweigh the recorded operational costs of the program.</p>
+<p>In order for the program to be deemed as effective, there would need to be a statistically significant treatment effect indicating that cases in the anti-fraud program were associated with less financial losses, less fraudulent cases, and better customer satisfaction. Because this is a randomized controlled trial, the treatment effect could be interpreted as a direct causal effect of the program. Importantly, these results should be substantial enough to outweigh the recorded operational costs of the program.</p>
 </section>
 </section>
 
